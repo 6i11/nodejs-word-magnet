@@ -1,0 +1,6 @@
+extends layout
+
+block content
+  each word, i in words
+    div(class="draggable ui-draggable",style="position: absolute; top: #{word.y}px; color: #666; background: rgb(#{word.r},#{word.g},#{word.b});left: #{word.x}px;",data-id="#{i}",id="#{i}")
+      h3(style="position:relative;bottom:60px;left:15px;")= word.text
